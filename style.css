@@ -51,6 +51,10 @@
 body {
     background: #0a0005;
     min-height: 100vh;
+    overscroll-behavior-y: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 #app {

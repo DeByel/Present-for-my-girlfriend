@@ -1,3 +1,7 @@
+document.body.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, { passive: false });
+
 const TOTAL_SLIDES = 4;
 
   function goTo(n) {

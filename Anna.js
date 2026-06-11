@@ -1,3 +1,22 @@
+let touchStartUrlY = 0;
+
+document.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+        touchStartUrlY = e.touches[0].clientY;
+    }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(e) {
+    if (e.touches.length === 1) {
+        const touchMoveY = e.touches[0].clientY;
+        
+        // Detecta se está puxando a tela para baixo estando no topo
+        if (window.scrollY === 0 && touchMoveY > touchStartUrlY) {
+            e.preventDefault(); // Mata o pull-to-refresh do navegador
+        }
+    }
+}, { passive: false });
+
 const TOTAL_SLIDES = 4;
 
   function goTo(n) {

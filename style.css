@@ -50,12 +50,10 @@
 
 body {
     background: #0a0005;
-    min-height: 100vh;
-    overscroll-behavior-y: none;
-    overflow: hidden;
+    width: 100%;
     margin: 0;
     padding: 0;
-    position: fixed;
+    overscroll-behavior-y: none;
 }
 
 #app {
